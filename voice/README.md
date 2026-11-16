@@ -10,7 +10,7 @@ Check CI clones each product repository to prove its versions, and it has no cre
 that private repository. DSH fetches this file anonymously and installs each commit-pinned git
 source with the reader's own Git credentials.
 
-Add `https://raw.githubusercontent.com/automagik-dev/dsh-marketplace/main/voice/index.json`
+Add `https://raw.githubusercontent.com/automagik-si/dsh-marketplace/main/voice/index.json`
 in DSH under Settings → Plugins → Plugin market → Indexes.
 
 The file is generated and published from the product repository with `pnpm market:index` and
