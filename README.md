@@ -3,7 +3,7 @@
 One index for every Automagik plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH). Add it once, and DSH's plugin market lists them all, offers each update as it ships, and installs exactly the version listed.
 
 ```
-https://raw.githubusercontent.com/automagik-dev/dsh-marketplace/main/index.json
+https://raw.githubusercontent.com/automagik-si/dsh-marketplace/main/index.json
 ```
 
 ## Add it to your DSH
@@ -17,34 +17,34 @@ The market ships with DSH as an optional bundle. Turn it on, then add the index:
    - id: plugin-market
      config:
        indexes:
-         - https://raw.githubusercontent.com/automagik-dev/dsh-marketplace/main/index.json
+         - https://raw.githubusercontent.com/automagik-si/dsh-marketplace/main/index.json
    ```
 
 DSH asks before it installs anything. When the index lists a newer version of a plugin you have, the market offers **Update**. A plugin added by name or address under Settings → Plugins → Add plugin is not updated that way; install from the market instead.
 
-Prefer not to set up DSH at all? The [Automagik desktop app](https://github.com/automagik-dev/automagik/tree/dev/apps/desktop) (`omni desktop`) is DSH with these plugins already in it.
+Prefer not to set up DSH at all? The [Automagik desktop app](https://github.com/automagik-si/automagik/tree/dev/apps/desktop) (`omni desktop`) is DSH with these plugins already in it.
 
 ## What is listed
 
 | Plugin | From | |
 |---|---|---|
-| Bot team (`@automagik/bots-dsh`) | [Automagik](https://github.com/automagik-dev/automagik) | The Bot team Omni and Genie build on: the Main Bot and its Bots, sessions, memory and settings. Keeps its files in `~/.automagik`, never in your DSH profile. |
+| Bot team (`@automagik/bots-dsh`) | [Automagik](https://github.com/automagik-si/automagik) | The Bot team Omni and Genie build on: the Main Bot and its Bots, sessions, memory and settings. Keeps its files in `~/.automagik`, never in your DSH profile. |
 | Welcome & Connect AI (`@automagik/welcome-dsh`) | Automagik | The welcome, the team step, and Connect AI. |
-| Genie (`@automagik/genie-dsh`) | [Genie](https://github.com/automagik-dev/genie), listed by Automagik | Genie joins your Bot team and grants wishes, each in its own git worktree of your project. Needs the Bot team and git. |
-| Omni channels (`@automagik/omni-channels-dsh`) | [Omni](https://github.com/automagik-dev/omni) | Link your Omni: its channels, chats and automations, and what each Bot may do there. |
+| Genie (`@automagik/genie-dsh`) | [Genie](https://github.com/automagik-si/genie), listed by Automagik | Genie joins your Bot team and grants wishes, each in its own git worktree of your project. Needs the Bot team and git. |
+| Omni channels (`@automagik/omni-channels-dsh`) | [Omni](https://github.com/automagik-si/omni) | Link your Omni: its channels, chats and automations, and what each Bot may do there. |
 | Omni canvases (`@automagik/omni-canvas-dsh`) | Omni | Live UI in the chat, drawn from your Omni. |
 | Bring your own AI | vetted by Automagik | Third-party providers (Claude Code, AI subscriptions), each at the version Automagik vetted from a reviewed fork at a pinned commit: no install scripts, no telemetry, credentials in DSH's own store, the source read at that version. |
 
 ### Renamed
 
-The Bot team and the welcome moved from Omni's repository to [automagik-dev/automagik](https://github.com/automagik-dev/automagik), and their names changed with them:
+The Bot team and the welcome moved from Omni's repository to [automagik-si/automagik](https://github.com/automagik-si/automagik), and their names changed with them:
 
 | Before | Now |
 |---|---|
 | `@automagik/omni-dsh` (Omni team) | `@automagik/bots-dsh` (Bot team) |
 | `@automagik/omni-ai-dsh` | `@automagik/welcome-dsh` |
 
-The retired names are no longer listed in this market; install the replacements above. Removing a market listing does not uninstall an existing package or delete its data. If an old package is still installed, install its replacement before removing it. Omni's channels and canvases retain compatibility with the old Bot team name. Historical entries remain available in this repository's Git history. The Omni desktop app moved too: it is the [Automagik desktop app](https://github.com/automagik-dev/automagik/tree/dev/apps/desktop) now, and an installed one updates into it.
+The retired names are no longer listed in this market; install the replacements above. Removing a market listing does not uninstall an existing package or delete its data. If an old package is still installed, install its replacement before removing it. Omni's channels and canvases retain compatibility with the old Bot team name. Historical entries remain available in this repository's Git history. The Omni desktop app moved too: it is the [Automagik desktop app](https://github.com/automagik-si/automagik/tree/dev/apps/desktop) now, and an installed one updates into it.
 
 ## Wanted
 
@@ -52,7 +52,7 @@ Plugins we want in the Automagik ecosystem, and what each needs before it is lis
 
 | Plugin | What it brings | Before it is listed |
 |---|---|---|
-| [Herdr](https://github.com/sunny0826/dsh-plugin-herdr) (`dsh-plugin-herdr`, MIT) | DSH sessions observe and drive Herdr, the terminal workspace for AI coding agents: its workspaces, panes and agents, as `herdr_*` tools and a status panel. The agents Herdr runs (Claude Code, Codex and others) bring their own subscriptions. | 0.0.1 does not load on 0.2.1-rc.2: it ships DSH's own packages as dependencies pinned to 0.0.x/0.1.x (`@deepseek-ai/dsh-tools` 0.0.1-rc.1 imports a `CallId` that `@deepseek-ai/dsh-llm` 0.2.1-rc.2 no longer exports). They have to become peer dependencies, on the 0.2 API. Tracked in [#1](https://github.com/automagik-dev/dsh-marketplace/issues/1). |
+| [Herdr](https://github.com/sunny0826/dsh-plugin-herdr) (`dsh-plugin-herdr`, MIT) | DSH sessions observe and drive Herdr, the terminal workspace for AI coding agents: its workspaces, panes and agents, as `herdr_*` tools and a status panel. The agents Herdr runs (Claude Code, Codex and others) bring their own subscriptions. | 0.0.1 does not load on 0.2.1-rc.2: it ships DSH's own packages as dependencies pinned to 0.0.x/0.1.x (`@deepseek-ai/dsh-tools` 0.0.1-rc.1 imports a `CallId` that `@deepseek-ai/dsh-llm` 0.2.1-rc.2 no longer exports). They have to become peer dependencies, on the 0.2 API. Tracked in [#1](https://github.com/automagik-si/dsh-marketplace/issues/1). |
 
 ## Versions
 
